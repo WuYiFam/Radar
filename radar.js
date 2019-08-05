@@ -13,6 +13,7 @@ class Radar {
     } = options;
 
     this.colors = colors;
+    this.data = data;
 
     this.categories = categories;
     // 直径
@@ -322,7 +323,7 @@ class Radar {
       let _text = (text || '').trim();
 
       // 数字和文本分成两列
-      let number = '0';
+      let number = this.data[i];
       let match = _text.match(/([0-9]+)$/);
       if (match) number = match[1] || number;
 
